@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: SanFrancisco, sans-serif;
+  font-size: 13.5px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* fonts*/
+@font-face {
+  font-family: Fascinate;
+  src: url(assets/fonts/Fascinate_inline/FascinateInline-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: SanFrancisco;
+  src: url(assets/fonts/SanFrancisco/sanfranciscodisplay-regular-webfont.woff) format('truetype');
+}

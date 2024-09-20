@@ -1,0 +1,135 @@
+.figuresPink {
+  color: #c586c0;
+}
+
+.figuresYellow {
+  color: #ffd700;
+}
+
+.figuresBlue {
+  color: #9cdcfe;
+}
+
+.figuresOrange {
+  color: #ce9178;
+}
+
+.figuresGreen {
+  color: #4ec9b0;
+}
+
+.figuresDarkBlue {
+  color: #569cd6;
+}
+
+.figuresGrey {
+  color: #808080;
+}
+
+.figuresLightYellow {
+  color: #dcdcaa;
+}
+
+#figures {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #1E1F22;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  z-index: -1;
+}
+
+#figures li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  color: #d4d4d4;
+
+  animation: animateFigures 25s linear infinite;
+  bottom: -150px;
+}
+
+#figures li:nth-child(1) {
+  left: 25%;
+
+  animation-delay: 0s;
+}
+
+#figures li:nth-child(2) {
+  left: 0;
+
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+#figures li:nth-child(3) {
+  left: 65%;
+
+  animation-delay: 4s;
+}
+
+#figures li:nth-child(4) {
+  left: 40%;
+
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+#figures li:nth-child(5) {
+  left: 65%;
+
+  animation-delay: 0s;
+}
+
+#figures li:nth-child(6) {
+  left: 85%;
+
+  animation-delay: 0s;
+  animation-duration: 20s;
+}
+
+#figures li:nth-child(7) {
+  left: 35%;
+
+  animation-delay: 7s;
+}
+
+#figures li:nth-child(8) {
+  left: 50%;
+
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+#figures li:nth-child(9) {
+  left: 20%;
+
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+#figures li:nth-child(10) {
+  left: 79%;
+
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animateFigures {
+  0% {
+   top: 0;
+  }
+
+  100% {
+  top: 100%;
+  }
+}
+
+
+
