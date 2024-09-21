@@ -6,16 +6,22 @@
 #desktop-nav{
   border-radius: 15px 15px 0 0;
   display: flex;
+  opacity: 0.8;
   ul:first-of-type{
     li:first-of-type {
       span{
         padding-left: 10px;
-        font-family: Fascinate, sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: GreatVives, sans-serif;
       }
     }
   }
   ul:last-of-type {
     margin-left: auto;
+    li:last-of-type {
+      padding-right: 15px;
+    }
   }
   ul {
     //background-color: blue;
