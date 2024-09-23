@@ -1,0 +1,208 @@
+#wallpaper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: -1000;
+  transition: ease-in-out 60s;
+}
+
+// wallpapers
+
+.code {
+  background-color: #1E1F22;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 13px;
+
+  li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    color: #d4d4d4;
+
+    animation: animateFigures 25s linear infinite;
+    bottom: -150px;
+    &:first-child{
+      left: 25%;
+      animation-delay: 0s;
+    }
+    &:nth-child(2) {
+      left: 0;
+
+      animation-delay: 2s;
+      animation-duration: 12s;
+    }
+    &:nth-child(3) {
+      left: 65%;
+
+      animation-delay: 4s;
+    }
+    &:nth-child(4) {
+      left: 40%;
+
+      animation-delay: 0s;
+      animation-duration: 18s;
+    }
+    &:nth-child(5) {
+      left: 65%;
+
+      animation-delay: 0s;
+    }
+    &:nth-child(6) {
+      left: 85%;
+
+      animation-delay: 0s;
+      animation-duration: 20s;
+    }
+    &:nth-child(7) {
+      left: 35%;
+
+      animation-delay: 7s;
+    }
+    &:nth-child(8) {
+      left: 50%;
+
+      animation-delay: 15s;
+      animation-duration: 45s;
+    }
+    &:nth-child(9) {
+      left: 20%;
+
+      animation-delay: 2s;
+      animation-duration: 35s;
+    }
+    &:nth-child(10) {
+      left: 79%;
+
+      animation-delay: 0s;
+      animation-duration: 11s;
+    }
+  }
+
+  .figuresPink {
+    color: #c586c0;
+  }
+
+  .figuresYellow {
+    color: #ffd700;
+  }
+
+  .figuresBlue {
+    color: #9cdcfe;
+  }
+
+  .figuresOrange {
+    color: #ce9178;
+  }
+
+  .figuresGreen {
+    color: #4ec9b0;
+  }
+
+  .figuresDarkBlue {
+    color: #569cd6;
+  }
+
+  .figuresGrey {
+    color: #808080;
+  }
+
+  .figuresLightYellow {
+    color: #dcdcaa;
+  }
+
+
+}
+.lake {
+  background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/4351.jpg");
+  * {
+    display: none;
+  }
+}
+.mountain {
+  background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/15613.jpg");
+  * {
+    display: none;
+  }
+}
+.presov {
+  background-image: url("https://images.pexels.com/photos/2421764/pexels-photo-2421764.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  * {
+    display: none;
+  }
+}
+
+  .castle {
+    background-image: url("https://images.pexels.com/photos/280173/pexels-photo-280173.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    * {
+      display: none;
+    }
+
+}
+
+.castle2 {
+  background-image: url("https://images.pexels.com/photos/1130256/pexels-photo-1130256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  * {
+    display: none;
+  }
+
+}
+//.lakesideHouses {
+//  background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/18705.jpg");
+//  * {
+//    display: none;
+//  }
+//}
+//
+//.mountain {
+//  background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/18739.jpg");
+//  * {
+//    display: none;
+//  }
+//}
+//
+//.chicago {
+//  background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/18599.jpg");
+//  * {
+//    display: none;
+//  }
+//}
+//
+//.amsterdam {
+//  background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/18599.jpg");
+//  * {
+//    display: none;
+//  }
+//}
+//code show animation
+
+@keyframes animateFigures {
+  0% {
+   top: 0;
+  }
+
+  100% {
+  top: 100%;
+  }
+}
+
+@keyframes easy-in-out {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

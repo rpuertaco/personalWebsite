@@ -1,3 +1,14 @@
-export const DAYS = [
-  "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",
+import {Wallpaper} from "../models/wallpaper.model";
+
+export const DAYS : string[] = [
+  "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
+]
+
+export const WALLPAPERS : Wallpaper[] = [
+  new Wallpaper("code", "white"),
+  new Wallpaper("lake", "white"),
+  new Wallpaper("mountain", "white"),
+  new Wallpaper("presov", "white"),
+  new Wallpaper("castle", "white"),
+  new Wallpaper("castle2", "black")
 ]

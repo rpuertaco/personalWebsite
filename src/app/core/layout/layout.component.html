@@ -1,5 +1,4 @@
-<app-main-navbar [theme]="theme" [localDate]="localDate"></app-main-navbar>
-<app-dropdown-menu></app-dropdown-menu>
+<app-main-navbar [textColor]="navText"  [localDate]="localDate"></app-main-navbar>
 <!--background changer-->
-<router-outlet [name]="selectedBackground"/>
+<app-wallpaper [wallpaper]="wallpaper"></app-wallpaper>
 <router-outlet/>

@@ -8,6 +8,6 @@ import {Component, Input} from '@angular/core';
   styleUrl: './main-navbar.component.scss'
 })
 export class MainNavbarComponent {
-  @Input() theme: string = 'nav-light'
+  @Input() textColor: string = 'white'
   @Input() localDate: string =''
 }

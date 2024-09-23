@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CodeComponent } from './code.component';
+import { WallpaperComponent } from './wallpaper.component';
 
 describe('CodeComponent', () => {
-  let component: CodeComponent;
-  let fixture: ComponentFixture<CodeComponent>;
+  let component: WallpaperComponent;
+  let fixture: ComponentFixture<WallpaperComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CodeComponent]
+      imports: [WallpaperComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CodeComponent);
+    fixture = TestBed.createComponent(WallpaperComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
