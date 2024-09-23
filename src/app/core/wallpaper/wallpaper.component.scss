@@ -10,7 +10,10 @@
   background-repeat: no-repeat;
   overflow: hidden;
   z-index: -1000;
-  transition: ease-in-out 60s;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
 }
 
 // wallpapers
@@ -192,17 +195,3 @@
   }
 }
 
-@keyframes easy-in-out {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
