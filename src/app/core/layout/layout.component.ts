@@ -35,7 +35,7 @@ export class LayoutComponent implements OnInit {
     const date = new Date();
     this.localDate = this.timeSystem(date);
     if(this.autoTheme){
-      switch (date.getHours() > 20){
+      switch (date.getHours() > 20 || date.getMinutes() < 7){
         case true:
           this.theme = 'nav-dark'
           break;
