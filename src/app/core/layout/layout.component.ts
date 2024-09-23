@@ -34,18 +34,18 @@ export class LayoutComponent implements OnInit {
   automaticFunctionalities(): void {
     const date = new Date();
     this.localDate = this.timeSystem(date);
-    if(this.autoTheme){
-      switch (date.getHours() > 19 || date.getMinutes() < 7){
-        case true:
-          this.theme = 'nav-dark'
-          break;
-        case false:
-          this.theme = 'nav-light'
-          break;
-      }
-    }
+    this.themeSystem(date)
   }
 
+  themeSystem(date: Date) : void{
+    if(this.autoTheme){
+      if (date.getHours() > 19 || date.getMinutes() < 7){
+        this.theme = 'nav-dark'
+        return
+      }
+      this.theme = 'nav-light'
+    }
+  }
   timeSystem(date: Date) : string {
     return DAYS[date.getDay() - 1] + ' ' + date.getDate() + '. ' + (date.getMonth() + 1) + '. ' + date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes() ;
   }
