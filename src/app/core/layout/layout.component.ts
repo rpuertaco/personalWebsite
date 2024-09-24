@@ -30,7 +30,8 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit() : void {
     if(this.autoWallpaper){
-      this.changeWallpaper(this.timeStamp.getDate() % WALLPAPERS.length)
+      this.changeWallpaper(this.timeStamp.getDay())
+
     }
   setInterval(() => {
     this.automaticFunctionalities()

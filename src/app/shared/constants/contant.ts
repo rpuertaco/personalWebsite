@@ -10,5 +10,6 @@ export const WALLPAPERS : Wallpaper[] = [
   new Wallpaper("mountain", "white"),
   new Wallpaper("presov", "black"),
   new Wallpaper("castle", "white"),
-  new Wallpaper("castle2", "black")
+  new Wallpaper("castle2", "black"),
+  new Wallpaper("bratislava", "white"),
 ]
