@@ -5,11 +5,11 @@ export const DAYS : string[] = [
 ]
 
 export const WALLPAPERS : Wallpaper[] = [
+  new Wallpaper("folklore", "black"),
   new Wallpaper("code", "white"),
-  new Wallpaper("lake", "white"),
-  new Wallpaper("mountain", "white"),
-  new Wallpaper("presov", "black"),
-  new Wallpaper("castle", "white"),
-  new Wallpaper("castle2", "black"),
+  new Wallpaper("lake", "black"),
+  new Wallpaper("mountain", "black"),
+  new Wallpaper("castle", "black"),
+  new Wallpaper("night", "white"),
   new Wallpaper("bratislava", "white"),
 ]

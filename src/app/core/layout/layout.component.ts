@@ -17,13 +17,12 @@ import {Wallpaper} from "../../shared/models/wallpaper.model";
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent implements OnInit {
-  // autoTheme : boolean = true
-  // theme: string = 'nav-light'
   autoWallpaper: boolean = true;
   timeStamp: Date = new Date();
   localDate: string = this.timeSystem(this.timeStamp);
-  wallpaper: string = 'castle';
+  wallpaper: string = 'code';
   navText: string = 'white';
+
   constructor() {
     this.automaticFunctionalities()
   }
@@ -31,8 +30,8 @@ export class LayoutComponent implements OnInit {
   ngOnInit() : void {
     if(this.autoWallpaper){
       this.changeWallpaper(this.timeStamp.getDay())
-
     }
+
   setInterval(() => {
     this.automaticFunctionalities()
   }, 1000)
@@ -41,7 +40,6 @@ export class LayoutComponent implements OnInit {
   automaticFunctionalities(): void {
     const date = new Date();
     this.localDate = this.timeSystem(date);
-    // this.themeSystem(date)
   }
 
   changeWallpaper(wallpaperNumber: number): void{
@@ -50,15 +48,6 @@ export class LayoutComponent implements OnInit {
     this.navText = selectedWallpaper.textColor;
   }
 
-  // themeSystem(date: Date) : void{
-  //   if(this.autoTheme){
-  //     if (date.getHours() > 19 || date.getMinutes() < 7){
-  //       this.theme = 'nav-dark'
-  //       return
-  //     }
-  //     this.theme = 'nav-light'
-  //   }
-  // }
   timeSystem(date: Date) : string {
     return DAYS[date.getDay()] + ' ' + date.getDate() + '. ' + (date.getMonth() + 1) + '. ' + date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes() ;
   }
