@@ -1,20 +1,85 @@
-<nav id="desktop-nav" class="'nav'"  [style]="'color:'+textColor">
-  <div id="nav-background"></div>
-  <ul>
-    <li>
-    <span>
+<nav id="nav-desktop"  [style]="'color:'+textColor">
+  <span class="blur">
+
+  </span>
+  <ul id="nav-main">
+    <li class="nav-option">
+    <span id="nav-logo">
       PC
     </span>
+      <ul class="nav-dropdown">
+        <li>
+          <a href="#">
+            About this page
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Settings
+          </a>
+        </li>
+      </ul>
     </li>
-    <li><span>PuertaCordoba</span></li>
-    <li><span>File</span></li>
+    <li class="nav-option">
+      <span class="bold">
+        PuertaCordoba
+      </span>
+<!--      <ul class="nav-dropdown">-->
+<!--        <li>-->
+<!--          <span>-->
+<!--            test-->
+<!--          </span>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <span>-->
+<!--            test-->
+<!--          </span>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <span>-->
+<!--            test-->
+<!--          </span>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <span>-->
+<!--            test-->
+<!--          </span>-->
+<!--        </li>-->
+<!--      </ul>-->
+    </li>
+    <li class="nav-option">
+      <span>
+        File
+      </span>
+<!--      <ul class="nav-dropdown">-->
+<!--        <li>-->
+<!--          <span>-->
+<!--            test-->
+<!--          </span>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <span>-->
+<!--            test-->
+<!--          </span>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <span>-->
+<!--            test-->
+<!--          </span>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <span>-->
+<!--            test-->
+<!--          </span>-->
+<!--        </li>-->
+<!--      </ul>-->
+    </li>
   </ul>
-  <ul>
+  <ul id="nav-right">
     <li>
       <span>
         {{localDate}}
       </span>
     </li>
   </ul>
-
 </nav>

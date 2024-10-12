@@ -1,47 +1,65 @@
-.nav{
+.blur{
+  border-radius: 15px 15px 0 0;
+  position: absolute;
   height: 37px;
-  opacity: 0.9;
+  width: 100%;
+  z-index: -999;
+  backdrop-filter: blur(1000px);
 }
 
-#desktop-nav {
+#nav-desktop {
   border-radius: 15px 15px 0 0;
   display: flex;
-  backdrop-filter: blur(20px);
-  //color: rgb(255, 255, 255);
-  ul {
-    //background-color: blue;
+  #nav-main {
     display: flex;
     height: 100%;
-
-    &:first-of-type {
-      li{
-        &:first-of-type {
-          span{
-            padding-left: 10px;
-            font-weight: bold;
-            font-size: 16px;
-            font-family: GreatVives, sans-serif;
-          }
-        }
-      }
+    #nav-logo{
+      padding-left: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: GreatVives, sans-serif;
     }
-
-    &:last-of-type {
-      margin-left: auto;
-      li{
-        &:last-of-type {
-          padding-right: 15px;
-        }
-      }
-    }
-
-    li{
+    .nav-option{
       padding: 0 10px 0 10px;
       text-align: center;
       line-height: 37px;
-      &:nth-of-type(2) {
-        font-weight: 1000;
+    }
+  }
+  #nav-right {
+    margin-left: auto;
+    li{
+      &:last-of-type {
+        padding-top: 10px;
+        padding-right: 15px;
       }
     }
   }
 }
+.nav-dropdown{
+  all: revert;
+  border-radius: 5px;
+  backdrop-filter: blur(20px) brightness(70%);
+  position: absolute;
+  width: 200px;
+  padding:4px;
+
+  li {
+    text-align: left;
+    line-height: 25px;
+    a {
+      padding-left: 5px;
+      border-radius: 5px;
+      display: block;
+      text-decoration: none;
+      color: white;
+    }
+  }
+  a:hover {
+
+    background-color: dodgerblue;
+  }
+}
+.bold{
+  font-weight: bold;
+}
+
