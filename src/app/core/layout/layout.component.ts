@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {RouterOutlet} from "@angular/router";
-import {DAYS, WALLPAPERS} from "../../shared/constants/contant";
+import {DAYS, WALLPAPERS} from "../../shared/constants/system.constant";
 import {MainNavbarComponent} from "../components/main-navbar/main-navbar.component";
-import {WallpaperComponent} from "../wallpaper/wallpaper.component";
+import {WallpaperComponent} from "../components/wallpaper/wallpaper.component";
 import {Wallpaper} from "../../shared/models/wallpaper.model";
 
 @Component({

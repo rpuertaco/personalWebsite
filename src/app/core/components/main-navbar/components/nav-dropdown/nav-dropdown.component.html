@@ -1,0 +1,9 @@
+<ul>
+  @for(option of options; track option) {
+    <li>
+      <a [routerLink]="option.url">
+        {{option.label}}
+      </a>
+    </li>
+  }
+</ul>
