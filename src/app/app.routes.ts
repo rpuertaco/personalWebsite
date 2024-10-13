@@ -10,7 +10,7 @@ export const routes: Routes = [{
       {
         path: '',
         outlet: 'default',
-        loadComponent: ()=> import('./core/components/windows/default-window/default-window.component').then((c)=> c.DefaultWindowComponent)
+        loadComponent: ()=> import('./core/components/top-bar/default-top-bar/default-top-bar.component').then((c)=> c.DefaultTopBarComponent)
       },
       {
         path: 'about',

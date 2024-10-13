@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DefaultWindowComponent } from './default-window.component';
+import { DefaultTopBarComponent } from './default-top-bar.component';
 
 describe('DefaultWindowComponent', () => {
-  let component: DefaultWindowComponent;
-  let fixture: ComponentFixture<DefaultWindowComponent>;
+  let component: DefaultTopBarComponent;
+  let fixture: ComponentFixture<DefaultTopBarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DefaultWindowComponent]
+      imports: [DefaultTopBarComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DefaultWindowComponent);
+    fixture = TestBed.createComponent(DefaultTopBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

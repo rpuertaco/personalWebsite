@@ -1,7 +1,7 @@
 <ul>
   @for(option of options; track option) {
     <li>
-      <a [routerLink]="option.url">
+      <a [routerLink]="option.url" (click)="changeTopBar(option.topBar)">
         {{option.label}}
       </a>
     </li>

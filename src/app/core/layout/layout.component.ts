@@ -24,7 +24,7 @@ export class LayoutComponent implements OnInit {
   localDate: string = this.timeSystem(this.timeStamp);
   wallpaper: string = 'code';
   navText: string = 'white';
-  window: string | null = null;
+  topBar: string | null = null;
 
   constructor() {
     this.automaticFunctionalities()

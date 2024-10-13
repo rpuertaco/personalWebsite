@@ -1,13 +1,15 @@
 <app-main-navbar [textColor]="navText"  [localDate]="localDate"></app-main-navbar>
 <!--background changer-->
 <app-wallpaper [wallpaper]="wallpaper"></app-wallpaper>
-@if(window){
+
   <div id="desktop">
+    @if(topBar){
     <div id="routerHolder" cdkDragBoundary="#desktop" cdkDrag>
-      <router-outlet name="{{window}}"/>
+      <router-outlet name="{{topBar}}"/>
       <router-outlet/>
     </div>
+    }
   </div>
-}
+
 
 
