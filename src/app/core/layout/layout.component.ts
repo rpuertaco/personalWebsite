@@ -4,6 +4,7 @@ import {DAYS, WALLPAPERS} from "../../shared/constants/system.constant";
 import {MainNavbarComponent} from "../components/main-navbar/main-navbar.component";
 import {WallpaperComponent} from "../components/wallpaper/wallpaper.component";
 import {Wallpaper} from "../../shared/models/wallpaper.model";
+import {CdkDrag} from "@angular/cdk/drag-drop";
 
 @Component({
   selector: 'app-layout',
@@ -11,17 +12,19 @@ import {Wallpaper} from "../../shared/models/wallpaper.model";
   imports: [
     RouterOutlet,
     MainNavbarComponent,
-    WallpaperComponent
+    WallpaperComponent,
+    CdkDrag
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent implements OnInit {
-  autoWallpaper: boolean = true;
+  autoWallpaper: boolean = false;
   timeStamp: Date = new Date();
   localDate: string = this.timeSystem(this.timeStamp);
   wallpaper: string = 'code';
   navText: string = 'white';
+  window: string | null = null;
 
   constructor() {
     this.automaticFunctionalities()

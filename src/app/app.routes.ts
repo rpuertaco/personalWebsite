@@ -8,6 +8,11 @@ export const routes: Routes = [{
     component: LayoutComponent,
     children: [
       {
+        path: '',
+        outlet: 'default',
+        loadComponent: ()=> import('./core/components/windows/default-window/default-window.component').then((c)=> c.DefaultWindowComponent)
+      },
+      {
         path: 'about',
         loadComponent: ()=>  import('./core/components/about/about.component').then((c)=>c.AboutComponent )
       }
