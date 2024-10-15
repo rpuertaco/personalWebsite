@@ -1,7 +1,7 @@
-import { Routes } from '@angular/router';
-import {HomeComponent} from "./components/home/home.component";
+import { Routes} from '@angular/router';
 import {LayoutComponent} from "./core/layout/layout.component";
-import {WallpaperComponent} from "./core/components/wallpaper/wallpaper.component";
+import {ActiveWindowService} from "./core/services/active-window.service";
+
 
 export const routes: Routes = [{
     path: '',
@@ -9,12 +9,20 @@ export const routes: Routes = [{
     children: [
       {
         path: '',
-        outlet: 'default',
-        loadComponent: ()=> import('./core/components/top-bar/default-top-bar/default-top-bar.component').then((c)=> c.DefaultTopBarComponent)
+        outlet: 'about',
+        loadComponent: ()=>  import('./core/components/about/about.component').then((c)=>c.AboutComponent )
       },
       {
         path: 'about',
-        loadComponent: ()=>  import('./core/components/about/about.component').then((c)=>c.AboutComponent )
+        loadComponent: ()=>  import('./core/components/about/about.component').then((c)=>c.AboutComponent ),
+        data: {
+          native: true,
+        }
+      },
+      {
+        path: '',
+        outlet: 'settings',
+        loadComponent: ()=> import('./core/components/settings/settings.component').then((c)=>c.SettingsComponent )
       }
     ]
   }

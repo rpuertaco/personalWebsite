@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {RouterOutlet} from "@angular/router";
-import {DAYS, WALLPAPERS} from "../../shared/constants/system.constant";
+import {ActivatedRoute, ActivatedRouteSnapshot, Router, RouterOutlet} from "@angular/router";
+import {DAYS, WALLPAPERS} from "../constants/system.constant";
 import {MainNavbarComponent} from "../components/main-navbar/main-navbar.component";
 import {WallpaperComponent} from "../components/wallpaper/wallpaper.component";
-import {Wallpaper} from "../../shared/models/wallpaper.model";
+import {Wallpaper} from "../models/wallpaper.model";
 import {CdkDrag} from "@angular/cdk/drag-drop";
 import {TopBarService} from "../services/top-bar.service";
+import {ActiveWindowService} from "../services/active-window.service";
 
 @Component({
   selector: 'app-layout',
@@ -27,7 +28,7 @@ export class LayoutComponent implements OnInit {
   navText: string = 'white';
 
 
-  constructor( private topBarService: TopBarService ) {
+  constructor( private windowService: ActiveWindowService  ) {
     this.automaticFunctionalities()
   }
 
@@ -56,7 +57,11 @@ export class LayoutComponent implements OnInit {
     return DAYS[date.getDay()] + ' ' + date.getDate() + '. ' + (date.getMonth() + 1) + '. ' + date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes() ;
   }
 
-  getTopBar(){
-    return this.topBarService.getTopBar()
+  getActiveWindows(){
+    return this.windowService.getActiveWindows();
   }
+
+  // getTopBar(){
+  //   return this.topBarService.getTopBar()
+  // }
 }

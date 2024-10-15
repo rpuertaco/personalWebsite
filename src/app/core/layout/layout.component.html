@@ -3,13 +3,17 @@
 <app-wallpaper [wallpaper]="wallpaper"></app-wallpaper>
 
   <div id="desktop">
-    @if(getTopBar()){
-    <div id="routerHolder" cdkDragBoundary="#desktop" cdkDrag>
-      <p>{{getTopBar()}}</p>
-<!--      <router-outlet name="{{getTopBar}}"/>-->
-      <router-outlet/>
+    <div class="routerHolder" cdkDragBoundary="#desktop" cdkDrag>
+      <router-outlet />
     </div>
+    @for(activeWindow of getActiveWindows(); track activeWindow){
+      <div class="routerHolder" cdkDragBoundary="#desktop" cdkDrag>
+        <p>{{activeWindow}}</p>
+        <router-outlet name="{{activeWindow}}"/>
+      </div>
     }
+
+
   </div>
 
 

@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {NavDropdownComponent} from "./components/nav-dropdown/nav-dropdown.component";
-import {LOGO_OPTIONS} from "../../../shared/constants/main-navbar.constant";
+import {LOGO_OPTIONS} from "../../constants/main-navbar.constant";
 
 @Component({
   selector: 'app-main-navbar',
