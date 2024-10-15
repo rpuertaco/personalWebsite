@@ -3,9 +3,10 @@
 <app-wallpaper [wallpaper]="wallpaper"></app-wallpaper>
 
   <div id="desktop">
-    @if(topBar){
+    @if(getTopBar()){
     <div id="routerHolder" cdkDragBoundary="#desktop" cdkDrag>
-      <router-outlet name="{{topBar}}"/>
+      <p>{{getTopBar()}}</p>
+<!--      <router-outlet name="{{getTopBar}}"/>-->
       <router-outlet/>
     </div>
     }

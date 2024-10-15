@@ -5,16 +5,18 @@ import {computed, Injectable, signal} from '@angular/core';
 })
 export class TopBarService {
 
-  #topBar = signal<string | null>(null);
-  topBar = computed(()=> this.#topBar());
+  topBar$ = signal<string | null>(null);
+  topBar = computed(()=> this.topBar$());
 
   constructor() {
-    console.log(this.#topBar());
-    console.log(this.topBar());
   }
 
 
   addTopBar(topBar: string) {
-    this.#topBar.set(topBar);
+    this.topBar$.set(topBar);
+  }
+
+  getTopBar() {
+    return this.topBar();
   }
 }

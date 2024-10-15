@@ -5,6 +5,7 @@ import {MainNavbarComponent} from "../components/main-navbar/main-navbar.compone
 import {WallpaperComponent} from "../components/wallpaper/wallpaper.component";
 import {Wallpaper} from "../../shared/models/wallpaper.model";
 import {CdkDrag} from "@angular/cdk/drag-drop";
+import {TopBarService} from "../services/top-bar.service";
 
 @Component({
   selector: 'app-layout',
@@ -24,9 +25,9 @@ export class LayoutComponent implements OnInit {
   localDate: string = this.timeSystem(this.timeStamp);
   wallpaper: string = 'code';
   navText: string = 'white';
-  topBar: string | null = null;
 
-  constructor() {
+
+  constructor( private topBarService: TopBarService ) {
     this.automaticFunctionalities()
   }
 
@@ -53,5 +54,9 @@ export class LayoutComponent implements OnInit {
 
   timeSystem(date: Date) : string {
     return DAYS[date.getDay()] + ' ' + date.getDate() + '. ' + (date.getMonth() + 1) + '. ' + date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes() ;
+  }
+
+  getTopBar(){
+    return this.topBarService.getTopBar()
   }
 }
