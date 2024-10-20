@@ -33,6 +33,7 @@ export class LayoutComponent implements OnInit {
   }
 
   ngOnInit() : void {
+    this.windowService.addWindow('about')
     if(this.autoWallpaper){
       this.changeWallpaper(this.timeStamp.getDay())
     }
@@ -45,6 +46,7 @@ export class LayoutComponent implements OnInit {
   automaticFunctionalities(): void {
     const date = new Date();
     this.localDate = this.timeSystem(date);
+    // this.changeWallpaper(this.timeStamp.getDay())
   }
 
   changeWallpaper(wallpaperNumber: number): void{

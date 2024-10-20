@@ -8,7 +8,6 @@
     </div>
     @for(activeWindow of getActiveWindows(); track activeWindow){
       <div class="routerHolder" cdkDragBoundary="#desktop" cdkDrag>
-        <p>{{activeWindow}}</p>
         <router-outlet name="{{activeWindow}}"/>
       </div>
     }

@@ -13,13 +13,6 @@ export const routes: Routes = [{
         loadComponent: ()=>  import('./core/components/about/about.component').then((c)=>c.AboutComponent )
       },
       {
-        path: 'about',
-        loadComponent: ()=>  import('./core/components/about/about.component').then((c)=>c.AboutComponent ),
-        data: {
-          native: true,
-        }
-      },
-      {
         path: '',
         outlet: 'settings',
         loadComponent: ()=> import('./core/components/settings/settings.component').then((c)=>c.SettingsComponent )

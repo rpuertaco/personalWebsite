@@ -3,7 +3,7 @@ ul {
   border-radius: 5px;
   backdrop-filter: blur(20px) brightness(70%);
   position: absolute;
-  width: 200px;
+  //width: 200px;
   padding:4px;
   z-index: 1000;
 
@@ -11,7 +11,7 @@ ul {
     text-align: left;
     line-height: 25px;
     a {
-      padding-left: 5px;
+      padding:0 5px;
       border-radius: 5px;
       display: block;
       text-decoration: none;
@@ -19,6 +19,6 @@ ul {
     }
   }
   a:hover {
-    background-color: dodgerblue;
+    background-color: rgb(42,85,180);
   }
 }

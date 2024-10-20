@@ -1,4 +1,4 @@
-.blur{
+.nav-background{
   border-radius: 15px 15px 0 0;
   position: absolute;
   height: 37px;
@@ -10,6 +10,7 @@
 #nav-desktop {
   border-radius: 15px 15px 0 0;
   display: flex;
+  cursor: default;
   #nav-main {
     display: flex;
     height: 100%;

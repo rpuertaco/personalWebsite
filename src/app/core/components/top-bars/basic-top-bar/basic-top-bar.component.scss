@@ -1,0 +1,39 @@
+.handleIcons {
+  display: flex;
+  width: fit-content;
+  margin:4px;
+  &:hover {
+    li {
+      a{
+        svg{
+          display: block;
+          fill: rgb(143, 28, 19);
+        }
+      }
+    }
+  }
+  li {
+    &:first-child {
+      a {
+        background-color: rgb(237, 106, 94);
+      }
+    }
+    a {
+      cursor: default;
+      text-align: center;
+      border-radius: 100%;
+      background-color: rgb(77, 77, 77);
+      margin: 4px;
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      svg {
+        display: none;
+        margin:auto;
+        border-radius: 100%;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}
