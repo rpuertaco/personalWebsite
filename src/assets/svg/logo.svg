@@ -1,0 +1,53 @@
+<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cuerpo del portátil -->
+  <rect x="30" y="100" width="140" height="10" fill="#333" />
+  <rect x="30" y="110" width="140" height="5" fill="#555" />
+
+  <!-- Pantalla del portátil -->
+  <polygon points="30,100 70,50 170,50 130,100" fill="#00BCD4" stroke="#222" stroke-width="2" />
+  <rect x="35" y="55" width="130" height="40" fill="white" />
+  <rect x="35" y="55" width="130" height="40" fill="url(#screenGradient)" />
+
+  <!-- Teclado con cuadrícula -->
+  <rect x="30" y="115" width="140" height="5" fill="#333" />
+  <g fill="#777">
+    <!-- Primera fila -->
+    <rect x="35" y="120" width="10" height="10" />
+    <rect x="50" y="120" width="10" height="10" />
+    <rect x="65" y="120" width="10" height="10" />
+    <rect x="80" y="120" width="10" height="10" />
+    <rect x="95" y="120" width="10" height="10" />
+    <rect x="110" y="120" width="10" height="10" />
+    <rect x="125" y="120" width="10" height="10" />
+    <rect x="140" y="120" width="10" height="10" />
+    <!-- Segunda fila -->
+    <rect x="35" y="135" width="10" height="10" />
+    <rect x="50" y="135" width="10" height="10" />
+    <rect x="65" y="135" width="10" height="10" />
+    <rect x="80" y="135" width="10" height="10" />
+    <rect x="95" y="135" width="10" height="10" />
+    <rect x="110" y="135" width="10" height="10" />
+    <rect x="125" y="135" width="10" height="10" />
+    <rect x="140" y="135" width="10" height="10" />
+    <!-- Tercera fila -->
+    <rect x="35" y="150" width="10" height="10" />
+    <rect x="50" y="150" width="10" height="10" />
+    <rect x="65" y="150" width="10" height="10" />
+    <rect x="80" y="150" width="10" height="10" />
+    <rect x="95" y="150" width="10" height="10" />
+    <rect x="110" y="150" width="10" height="10" />
+    <rect x="125" y="150" width="10" height="10" />
+    <rect x="140" y="150" width="10" height="10" />
+  </g>
+
+  <!-- Texto en la pantalla -->
+  <text x="100" y="75" font-family="Arial" font-size="15" fill="black" text-anchor="middle">&lt;RPC/&gt;</text>
+
+  <!-- Definición de gradiente para la pantalla -->
+  <defs>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00BCD4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0097A7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

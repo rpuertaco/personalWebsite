@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, VERSION} from '@angular/core';
 import {BasicTopBarComponent} from "../top-bars/basic-top-bar/basic-top-bar.component";
+import {ActiveWindowService} from "../../services/active-window.service";
+
 
 
 @Component({
@@ -13,10 +15,16 @@ import {BasicTopBarComponent} from "../top-bars/basic-top-bar/basic-top-bar.comp
 })
 export class AboutComponent {
   // native= false;
-  constructor() {
+  year = new Date().getFullYear();
+  constructor(private windowService: ActiveWindowService) {
   }
 
   // ngOnInit() {
   //   this.native = !!this.activatedRoute.snapshot.data['native'];
   // }
+
+  goToSettings(){
+    this.windowService.addWindow("settings")
+  }
+  protected readonly VERSION = VERSION;
 }

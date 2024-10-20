@@ -1,12 +1,56 @@
-<div class="page-holder">
-  <div class="background"></div>
+<div id="page-holder">
+  <div id="background"></div>
   <app-basic-top-bar></app-basic-top-bar>
-  <div class="content">
+  <div id="content">
+
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Pantalla del portátil -->
+      <rect x="30" y="30" width="140" height="100" fill="#00BCD4" stroke="black" stroke-width="2" />
+      <rect x="35" y="35" width="130" height="90" fill="white" />
+
+      <!-- Teclado -->
+      <rect x="30" y="130" width="140" height="10" fill="black" />
+      <rect x="40" y="140" width="120" height="10" fill="darkgray" />
+      <rect x="40" y="150" width="120" height="10" fill="darkgray" />
+
+      <!-- Texto en la pantalla -->
+      <text x="100" y="85" font-family="Arial" font-size="20" fill="black" text-anchor="middle">&lt;RPC/&gt;</text>
+    </svg>
+
     <h3>
       PuertaCordoba.com
     </h3>
-    <p>about works!</p>
+    <span id="little">Ruben Puerta Cordoba site, 2024</span>
+
+  <div class="separator">
+
+    <dl>
+      <dt>Framework</dt>
+      <dd>Angular {{VERSION.full}}</dd>
+      <dt>Styles</dt>
+      <dd>Sass</dd>
+      <dt>Library</dt>
+      <dd>Angular Material</dd>
+      <dt>Type</dt>
+      <dd>Serverless</dd>
+      <dt>Platform</dt>
+      <dd>Netlify</dd>
+    </dl>
   </div>
+    <div class="separator">
+      <a (click)="goToSettings()"  id="button">
+        More information...
+      </a>
+    </div>
+  <div class="separator">
+    <p class="copyright">
+      ©{{year}} Ruben Puerta Cordoba.
+    </p>
+    <p class="copyright">
+      All rights Reserved.
+    </p>
+  </div>
+</div>
 
 </div>
 
