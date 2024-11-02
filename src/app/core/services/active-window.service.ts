@@ -15,6 +15,13 @@ export class ActiveWindowService {
     }
   }
 
+  removeWindow(activeWindow: string) {
+    this.activeWindows$.update((values)=> {
+      values.splice(values.indexOf(activeWindow), 1)
+      return values
+    });
+  }
+
   getActiveWindows() {
     return this.activeWindows()();
   }

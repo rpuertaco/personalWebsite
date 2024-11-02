@@ -27,4 +27,8 @@ export class AboutComponent {
     this.windowService.addWindow("settings")
   }
   protected readonly VERSION = VERSION;
+
+  close(): void {
+    this.windowService.removeWindow("about")
+  }
 }
