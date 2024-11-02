@@ -15,8 +15,28 @@ export const routes: Routes = [{
       {
         path: '',
         outlet: 'settings',
-        loadComponent: ()=> import('./core/components/settings/settings.component').then((c)=>c.SettingsComponent )
-      }
+        loadComponent: ()=> import('./core/components/settings/settings.component').then((c)=>c.SettingsComponent ),
+        children : [
+          {
+            path: '',
+            outlet: 'general',
+            loadComponent: ()=> import('./core/components/settings/components/general/general.component').then((c)=>c.GeneralComponent )
+          }
+        ]
+      },
+      // {
+      //   path: 'settings',
+      //   loadComponent: ()=> import('./core/components/settings/settings.component').then((c)=>c.SettingsComponent ),
+      //   data : {
+      //     native: true,
+      //   },
+      //   children : [
+      //     {
+      //       path: 'general',
+      //       loadComponent: ()=> import('./core/components/settings/components/general/general.component').then((c)=>c.GeneralComponent )
+      //     }
+      //   ]
+      // }
     ]
   }
 

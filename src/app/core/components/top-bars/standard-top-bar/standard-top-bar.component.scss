@@ -1,0 +1,75 @@
+.handleIcons {
+  display: flex;
+  width: fit-content;
+  margin:4px;
+  &:hover {
+    li {
+      &:first-child {
+      a{
+        svg{
+          display: block;
+          fill: rgb(143, 28, 19);
+          }
+        }
+      }
+      &:nth-child(2) {
+        a{
+          svg{
+            display: block;
+            fill: rgb(169, 114, 41);
+          }
+        }
+      }
+      &:last-child {
+        a{
+          svg{
+            display: block;
+            fill: rgb(41, 96, 24);
+          }
+        }
+      }
+    }
+  }
+  li {
+    &:first-child {
+      a {
+        background-color: rgb(237, 106, 94);
+      }
+    }
+    &:nth-child(2) {
+      a {
+        background-color: rgb(245, 191, 79);
+      }
+    }
+    &:last-child {
+      a {
+        background-color: rgb(98, 197, 84);
+      }
+    }
+    a {
+      cursor: default;
+      text-align: center;
+      border-radius: 100%;
+      margin: 4px;
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      svg {
+        display: none;
+        margin:auto;
+        border-radius: 100%;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}
+
+*{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
