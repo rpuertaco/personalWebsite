@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WalpaperMenuComponent } from './walpaper-menu.component';
+import { WallpaperMenuComponent } from './wallpaper-menu.component';
 
-describe('WalpaperMenuComponent', () => {
-  let component: WalpaperMenuComponent;
-  let fixture: ComponentFixture<WalpaperMenuComponent>;
+describe('WallpaperMenuComponent', () => {
+  let component: WallpaperMenuComponent;
+  let fixture: ComponentFixture<WallpaperMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WalpaperMenuComponent]
+      imports: [WallpaperMenuComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WalpaperMenuComponent);
+    fixture = TestBed.createComponent(WallpaperMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
