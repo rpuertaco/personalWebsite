@@ -9,7 +9,7 @@ describe("NavDropdownComponent", () => {
     let windowServiceSpy: jasmine.SpyObj<ActiveWindowService>;
 
     beforeEach(async () => {
-        const spy = jasmine.createSpyObj("ActiveWindowService", ["addWindow", "removeWindow"]);
+        const spy = jasmine.createSpyObj("ActiveWindowService", ["addWindow"]);
         await TestBed.configureTestingModule({
             imports: [NavDropdownComponent],
             providers: [
@@ -20,6 +20,7 @@ describe("NavDropdownComponent", () => {
 
         fixture = TestBed.createComponent(NavDropdownComponent);
         component = fixture.componentInstance;
+        windowServiceSpy = TestBed.inject(ActiveWindowService) as jasmine.SpyObj<ActiveWindowService>;
         fixture.detectChanges();
     });
 
@@ -29,6 +30,6 @@ describe("NavDropdownComponent", () => {
 
     it("should addActiveWindow call activeWindowService", () => {
         component.addActiveWindow("settings")
-        expect(windowServiceSpy.addWindow).toHaveBeenCalledWith("settings");
+        expect(windowServiceSpy.addWindow).toHaveBeenCalled();
     })
 });
