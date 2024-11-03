@@ -19,7 +19,6 @@
 li{
   color: rgb(223,225,228);
   padding: 0 5px;
-  background-color: yellow;
   &:nth-child(2) {
     a{
       div{
@@ -44,8 +43,9 @@ li{
     }
   }
   a{
-    cursor: pointer;
-    background-color: green;
+    cursor: default;
+    padding: 2px;
+    background-color: rgb(42,84,179);
     display: flex;
     div {
       padding: 2px;
