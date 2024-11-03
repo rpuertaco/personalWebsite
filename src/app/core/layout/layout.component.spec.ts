@@ -2,7 +2,7 @@ import {ComponentFixture, discardPeriodicTasks, fakeAsync, TestBed, tick} from "
 
 import {LayoutComponent} from "./layout.component";
 import {Wallpaper} from "../models/wallpaper.model";
-import {WALLPAPERS} from "../constants/system.constant";
+import {DAYS, WALLPAPERS} from "../constants/system.constant";
 
 describe("LayoutComponent", () => {
     let component: LayoutComponent;
@@ -61,4 +61,10 @@ describe("LayoutComponent", () => {
         expect(component.navText).toEqual(selectedWallpaper.textColor);
     });
 
+    it("should return the date and time on correct format timeSystem", () => {
+        const date = new Date("2023-11-03T15:05:00");
+        const formattedDate = component.timeSystem(date);
+        const expectedFormat = `${DAYS[date.getDay()]} ${date.getDate()}. ${date.getMonth() + 1}. ${date.getHours()}:${date.getMinutes() < 10 ? "0" : ""}${date.getMinutes()}`;
+        expect(formattedDate).toEqual(expectedFormat);
+    });
 });
