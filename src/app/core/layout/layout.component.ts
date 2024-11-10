@@ -25,7 +25,8 @@ export class LayoutComponent implements OnInit {
     localDate: string = this.timeSystem(this.timeStamp);
     wallpaper: string = "code";
     navText: string = "white";
-
+    // }
+    protected readonly close = close;
 
     constructor(private windowService: ActiveWindowService) {
         this.automaticFunctionalities()
@@ -57,11 +58,10 @@ export class LayoutComponent implements OnInit {
         return DAYS[date.getDay()] + " " + date.getDate() + ". " + (date.getMonth() + 1) + ". " + date.getHours() + ":" + (date.getMinutes() < 10 ? "0" : "") + date.getMinutes();
     }
 
+    // getTopBar(){
+    //   return this.topBarService.getTopBar()
+
     getActiveWindows() {
         return this.windowService.getActiveWindows();
     }
-
-    // getTopBar(){
-    //   return this.topBarService.getTopBar()
-    // }
 }
