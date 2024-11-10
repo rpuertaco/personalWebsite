@@ -1,34 +1,35 @@
-import {Component, VERSION} from '@angular/core';
+import {Component, VERSION} from "@angular/core";
 import {BasicTopBarComponent} from "../top-bars/basic-top-bar/basic-top-bar.component";
 import {ActiveWindowService} from "../../services/active-window.service";
 
 
-
 @Component({
-  selector: 'app-about',
-  standalone: true,
-  imports: [
-    BasicTopBarComponent
-  ],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+    selector: "app-about",
+    standalone: true,
+    imports: [
+        BasicTopBarComponent
+    ],
+    templateUrl: "./about.component.html",
+    styleUrl: "./about.component.scss"
 })
 export class AboutComponent {
-  // native= false;
-  year = new Date().getFullYear();
-  constructor(private windowService: ActiveWindowService) {
-  }
+    // native= false;
+    year = new Date().getFullYear();
+    protected readonly VERSION = VERSION;
 
-  // ngOnInit() {
-  //   this.native = !!this.activatedRoute.snapshot.data['native'];
-  // }
+    // ngOnInit() {
+    //   this.native = !!this.activatedRoute.snapshot.data['native'];
+    // }
 
-  goToSettings(){
-    this.windowService.addWindow("settings")
-  }
-  protected readonly VERSION = VERSION;
+    constructor(private windowService: ActiveWindowService) {
+    }
 
-  close(): void {
-    this.windowService.removeWindow("about")
-  }
+    goToSettings() {
+        this.windowService.removeWindow("settings");
+        this.windowService.addWindow("settings")
+    }
+
+    close(): void {
+        this.windowService.removeWindow("about")
+    }
 }

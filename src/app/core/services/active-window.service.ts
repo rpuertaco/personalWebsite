@@ -1,28 +1,33 @@
-import {computed, Injectable, signal} from '@angular/core';
+import {computed, Injectable, signal} from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: "root"
 })
 export class ActiveWindowService {
-  activeWindows$ = signal<string[]>([]);
-  activeWindows = computed(() => this.activeWindows$);
+    activeWindows$ = signal<string[]>([]);
+    activeWindows = computed(() => this.activeWindows$);
 
-  constructor() { }
-
-  addWindow(activeWindow: string) {
-    if(this.getActiveWindows().indexOf(activeWindow) === -1) {
-      this.activeWindows$.update((values)=> { return [...values, activeWindow] });
+    constructor() {
     }
-  }
 
-  removeWindow(activeWindow: string) {
-    this.activeWindows$.update((values)=> {
-      values.splice(values.indexOf(activeWindow), 1)
-      return values
-    });
-  }
+    addWindow(activeWindow: string) {
+        if (this.getActiveWindows().indexOf(activeWindow) === -1) {
+            this.activeWindows$.update((values) => {
+                return [...values, activeWindow]
+            });
+        }
+    }
 
-  getActiveWindows() {
-    return this.activeWindows()();
-  }
+    removeWindow(activeWindow: string) {
+        if (this.getActiveWindows().indexOf(activeWindow) != -1) {
+            this.activeWindows$.update((values) => {
+                values.splice(values.indexOf(activeWindow), 1)
+                return values
+            });
+        }
+    }
+
+    getActiveWindows() {
+        return this.activeWindows()();
+    }
 }
