@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {StandardTopBarComponent} from "../top-bars/standard-top-bar/standard-top-bar.component";
 import {RouterOutlet} from "@angular/router";
 import {NgClass} from "@angular/common";
@@ -16,10 +16,9 @@ import {ActiveWindowService} from "../../services/active-window.service";
     styleUrl: "./settings.component.scss"
 })
 export class SettingsComponent {
-    settingComponent = "general"
+    private activeWindowService = inject(ActiveWindowService);
 
-    constructor(private activeWindowService: ActiveWindowService) {
-    }
+    settingComponent = "general"
 
     setComponent(componentName: string) {
         this.settingComponent = componentName;

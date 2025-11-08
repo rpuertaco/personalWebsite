@@ -1,4 +1,4 @@
-import {Component, VERSION} from '@angular/core';
+import { Component, VERSION, inject } from '@angular/core';
 import {BasicTopBarComponent} from "../top-bars/basic-top-bar/basic-top-bar.component";
 import {ActiveWindowService} from "../../services/active-window.service";
 
@@ -14,16 +14,11 @@ import {ActiveWindowService} from "../../services/active-window.service";
     styleUrl: "./about.component.scss"
 })
 export class AboutComponent {
+    private windowService = inject(ActiveWindowService);
+
     // native= false;
     year = new Date().getFullYear();
     protected readonly VERSION = VERSION;
-
-    // ngOnInit() {
-    //   this.native = !!this.activatedRoute.snapshot.data['native'];
-    // }
-
-    constructor(private windowService: ActiveWindowService) {
-    }
 
     goToSettings() {
         this.windowService.removeWindow("settings");

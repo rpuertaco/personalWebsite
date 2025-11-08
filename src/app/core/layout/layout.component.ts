@@ -1,4 +1,4 @@
-import {Component, OnInit} from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
 import {RouterOutlet} from "@angular/router";
 import {DAYS, WALLPAPERS} from "../constants/system.constant";
 import {MainNavbarComponent} from "../components/main-navbar/main-navbar.component";
@@ -19,6 +19,8 @@ import {ActiveWindowService} from "../services/active-window.service";
     styleUrl: "./layout.component.scss"
 })
 export class LayoutComponent implements OnInit {
+    private windowService = inject(ActiveWindowService);
+
     autoWallpaper: boolean = false;
     timeStamp: Date = new Date();
     localDate: string = this.timeSystem(this.timeStamp);
@@ -27,7 +29,7 @@ export class LayoutComponent implements OnInit {
     // }
     protected readonly close = close;
 
-    constructor(private windowService: ActiveWindowService) {
+    constructor() {
         this.automaticFunctionalities()
     }
 
