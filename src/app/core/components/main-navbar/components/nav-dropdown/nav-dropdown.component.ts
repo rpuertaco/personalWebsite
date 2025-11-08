@@ -1,13 +1,10 @@
 import {Component, Input} from "@angular/core";
 import {NavOption} from "../../../../models/nav-option.model";
-import {RouterLink} from "@angular/router";
 import {ActiveWindowService} from "../../../../services/active-window.service";
 
 @Component({
     selector: "app-nav-dropdown",
-    imports: [
-        RouterLink
-    ],
+    imports: [],
     templateUrl: "./nav-dropdown.component.html",
     styleUrl: "./nav-dropdown.component.scss"
 })
