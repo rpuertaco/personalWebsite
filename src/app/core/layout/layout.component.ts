@@ -9,7 +9,6 @@ import {ActiveWindowService} from "../services/active-window.service";
 
 @Component({
     selector: "app-layout",
-    standalone: true,
     imports: [
         RouterOutlet,
         MainNavbarComponent,

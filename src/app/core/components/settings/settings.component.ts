@@ -3,14 +3,13 @@ import {StandardTopBarComponent} from "../top-bars/standard-top-bar/standard-top
 import { RouterOutlet} from "@angular/router";
 
 @Component({
-  selector: 'app-settings',
-  standalone: true,
-  imports: [
-    StandardTopBarComponent,
-    RouterOutlet,
-  ],
-  templateUrl: './settings.component.html',
-  styleUrl: './settings.component.scss'
+    selector: 'app-settings',
+    imports: [
+        StandardTopBarComponent,
+        RouterOutlet,
+    ],
+    templateUrl: './settings.component.html',
+    styleUrl: './settings.component.scss'
 })
 export class SettingsComponent {
 settingComponent = 'general'

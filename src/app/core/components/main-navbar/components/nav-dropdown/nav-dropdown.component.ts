@@ -5,7 +5,6 @@ import {ActiveWindowService} from "../../../../services/active-window.service";
 
 @Component({
     selector: "app-nav-dropdown",
-    standalone: true,
     imports: [
         RouterLink
     ],
