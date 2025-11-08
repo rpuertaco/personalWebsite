@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from "@angular/core";
+import {Component, output} from '@angular/core';
 import {CdkDragHandle} from "@angular/cdk/drag-drop";
 
 @Component({
@@ -11,7 +11,7 @@ import {CdkDragHandle} from "@angular/cdk/drag-drop";
     styleUrl: "./standard-top-bar.component.scss"
 })
 export class StandardTopBarComponent {
-    @Output() closeMe = new EventEmitter();
+  readonly closeMe = output();
 
     close(): void {
         this.closeMe.emit();

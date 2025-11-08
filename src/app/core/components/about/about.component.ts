@@ -1,6 +1,7 @@
-import {Component, VERSION} from "@angular/core";
+import {Component, VERSION} from '@angular/core';
 import {BasicTopBarComponent} from "../top-bars/basic-top-bar/basic-top-bar.component";
 import {ActiveWindowService} from "../../services/active-window.service";
+
 
 
 @Component({
