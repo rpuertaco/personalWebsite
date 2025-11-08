@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, output} from '@angular/core';
 
 @Component({
     selector: 'app-standard-top-bar',
@@ -7,7 +7,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
     styleUrl: './standard-top-bar.component.scss'
 })
 export class StandardTopBarComponent {
-  @Output() closeMe = new EventEmitter();
+  readonly closeMe = output();
 
   close():void {
     this.closeMe.emit();
