@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, input} from '@angular/core';
 import {NavDropdownComponent} from "./components/nav-dropdown/nav-dropdown.component";
 import {LOGO_OPTIONS} from "../../constants/main-navbar.constant";
 
@@ -11,7 +11,7 @@ import {LOGO_OPTIONS} from "../../constants/main-navbar.constant";
     styleUrl: './main-navbar.component.scss'
 })
 export class MainNavbarComponent {
-  @Input() textColor: string = 'white'
-  @Input() localDate: string =''
+  readonly textColor = input<string>('white');
+  readonly localDate = input<string>('');
   protected readonly LOGO_OPTIONS = LOGO_OPTIONS;
 }

@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, input} from '@angular/core';
 
 
 
@@ -9,5 +9,5 @@ import {Component, Input} from '@angular/core';
     styleUrl: './wallpaper.component.scss'
 })
 export class WallpaperComponent {
-  @Input() wallpaper: string = "code"
+  readonly wallpaper = input<string>("code");
 }

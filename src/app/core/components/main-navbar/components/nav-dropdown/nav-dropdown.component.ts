@@ -1,4 +1,4 @@
-import { Component, Input, inject } from "@angular/core";
+import { Component, inject, input } from "@angular/core";
 import {NavOption} from "../../../../models/nav-option.model";
 import {ActiveWindowService} from "../../../../services/active-window.service";
 
@@ -11,7 +11,7 @@ import {ActiveWindowService} from "../../../../services/active-window.service";
 export class NavDropdownComponent {
     private activeWindowService = inject(ActiveWindowService);
 
-    @Input() options: NavOption[] = []
+    readonly options = input<NavOption[]>([]);
 
 
     addActiveWindow(activeWindow: string) {

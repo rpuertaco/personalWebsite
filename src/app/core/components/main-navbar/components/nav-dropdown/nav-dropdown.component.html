@@ -1,5 +1,5 @@
 <ul>
-  @for(option of options; track option) {
+  @for(option of options(); track option) {
     <li>
       <a
         (click)="addActiveWindow(option.url)"
