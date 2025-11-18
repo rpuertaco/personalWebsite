@@ -46,7 +46,11 @@ export const routes: Routes = [{
             },
             children: defaultSettingsChildren
 
-        }
+        },
+        {
+            path: "profile",
+            redirectTo: "settings/profile"
+        },
     ]
 }
 
