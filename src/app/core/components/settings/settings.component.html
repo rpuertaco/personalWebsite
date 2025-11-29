@@ -5,8 +5,17 @@
         <div id="menu">
             <ul>
                 <li>
-                    <a (click)="setComponent('profile')" [ngClass]="settingComponent === 'profile' ? 'active' : '' ">Ruben
-                        Puerta Cordoba</a>
+                    <a (click)="setComponent('profile')" [ngClass]="settingComponent === 'profile' ? 'active' : '' ">
+                        <img alt="Profile picture" id="profile-pic" src="assets/images/profile.jpeg"/>
+                        <span>
+                            <span>
+                                Ruben Puerta Cordoba
+                            </span>
+                            <span>Curriculum Vitae</span>
+                        </span>
+
+
+                    </a>
                 </li>
                 <li>
                     <a (click)="setComponent('general')" [ngClass]="settingComponent === 'general' ? 'active' : '' ">
@@ -64,8 +73,10 @@
                 </li>
             </ul>
         </div>
-        <div id="router">
-            <router-outlet [name]="settingComponent"></router-outlet>
-        </div>
+        @if (isDesktop) {
+            <div id="router">
+                <router-outlet [name]="settingComponent"></router-outlet>
+            </div>
+        }
     </div>
 </div>

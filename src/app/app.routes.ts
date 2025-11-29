@@ -38,6 +38,11 @@ export const routes: Routes = [{
             children: defaultSettingsChildren
         },
         {
+            path: "",
+            outlet: "profile",
+            loadComponent: () => import("./core/components/settings/components/profile/profile.component").then((c) => c.ProfileComponent)
+        },
+        {
             path: "settings/profile",
             loadComponent: () => import("./core/components/settings/settings.component").then((c) => c.SettingsComponent),
             data: {
